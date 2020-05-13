@@ -266,7 +266,7 @@ if __name__ == "__main__":
                                      test_results=True, cv_type=None, search_type=None, scorer="corr",
                                      model=model)
 
-        # filling real gaps, arizona south dakota, arkansas
+        # filling real gaps, arizona, south dakota, arkansas
         regional_learning_experiment(big_folder="regional_learning_Real_Gaps",
                                      origi_data_folder="Original_Data",
                                      experiment_folder="Spatial_Experiments",
