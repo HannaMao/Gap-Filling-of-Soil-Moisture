@@ -3,16 +3,16 @@ Code for paper [Gap Filling of High-Resolution Soil Moisture for SMAP/Sentinel-1
 ](https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2019WR024902). An open access version of the paper can be found [here](https://eartharxiv.org/ce865/).
 
 ## Data Preprocessing
-Code for data preprocessing is contained in folder **data_preprocessing**. Functions are then called by generate_experiment_data.py to generate experiment data. 
+Code for data preprocessing is contained in folder **data_preprocessing**. Functions are then called by **generate_experiment_data.py** to generate experiment data. 
 
 Data from various sources are first converted to a unified format [netCDF4](https://unidata.github.io/netcdf4-python/netCDF4/index.html) with their original resolutions being kept. They are then rescaled to have the same resolution as the SMAP/Sentinel-1 3 km soil moisture product. More details can be found in the paper.  
 
 
 ## Machine Learning Modeling
-1. Features for brightness temperature downnscaling and soil moisture prediction are defined in _queries_single_day/queries_tb_v_disaggregated.txt_ and _queries_single_day/queries_soil_moisture.txt_ separately. You can define different feature sets at the same time by giving each set a unique number. Predictions will be output to a subfolder named by the given number.
+1. Features for brightness temperature downnscaling and soil moisture prediction are defined in **queries_single_day/queries_tb_v_disaggregated.txt** and **queries_single_day/queries_soil_moisture.txt** separately. You can define different feature sets at the same time by giving each set a unique number. Predictions will be output to a subfolder named by the given number.
 2. Experiments including regional learning ones (spatial, temporal, and spatiotemporal), temporal limitation exploration, real gap filling are called from **regional_learning_experiments.py**.
 
-   Experiments for the spatial limitation exploration are called from single_day_experiments.py.
+   Experiments for the spatial limitation exploration are called from **single_day_experiments.py**.
 3. Code for machine learning models are contained in **soil_moisture_downscaling/machine_learning**. New machine learning models can be added here.
 
 ## Cite this work
