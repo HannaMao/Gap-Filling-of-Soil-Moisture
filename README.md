@@ -5,7 +5,7 @@ Code for paper [Gap Filling of High-Resolution Soil Moisture for SMAP/Sentinel-1
 ## Data Preprocessing
 Code for data preprocessing is contained in folder **data_preprocessing**. Functions are then called by generate_experiment_data.py to generate experiment data. 
 
-Data from various sources are first converted to a unified format [netCDF4](https://unidata.github.io/netcdf4-python/netCDF4/index.html) with their original resolutions kept. They are then rescaled to have the same resolution as the SMAP/Sentinel-1 3 km soil moisture product. More details can be found in the paper.  
+Data from various sources are first converted to a unified format [netCDF4](https://unidata.github.io/netcdf4-python/netCDF4/index.html) with their original resolutions being kept. They are then rescaled to have the same resolution as the SMAP/Sentinel-1 3 km soil moisture product. More details can be found in the paper.  
 
 
 ## Cite this work
